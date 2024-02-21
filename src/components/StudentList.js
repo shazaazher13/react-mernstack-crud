@@ -7,7 +7,7 @@ function StudentList() {
 
   const deleteStudent = (_id) => {
     axios
-      .delete("http://localhost:4000/students/delete-student/" + _id)
+      .delete("http://0.0.0.0:4000/students/delete-student/" + _id)
       .then(() => {
         console.log("Data successfully deleted!");
       })
@@ -18,7 +18,7 @@ function StudentList() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/students/")
+      .get("http://0.0.0.0:4000/students/")
       .then((res) => {
         setUserForm(res.data.data);
       })
