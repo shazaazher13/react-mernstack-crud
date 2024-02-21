@@ -26,7 +26,10 @@ function CreateStudent() {
           email: "",
           rollno: "",
         });
-      });
+      })
+      .catch((e) => {
+        console.log(e);
+    });
   };
 
   useEffect(() => {}, []);
