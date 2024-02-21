@@ -23,7 +23,7 @@ function EditStudent() {
   const onUpdate = (e) => {
     e.preventDefault();
     axios
-      .put("https://0.0.0.0:4000/students/update-student/" + params.id, {
+      .put("https://ed-5868896213139456.educative.run:4000/students/update-student/" + params.id, {
         name: userForm.name,
         email: userForm.email,
         rollno: userForm.rollno,
@@ -36,7 +36,7 @@ function EditStudent() {
 
   useEffect(() => {
     axios
-      .get("https://0.0.0.0:4000/students/get-student/" + params.id)
+      .get("https://ed-5868896213139456.educative.run:4000/students/get-student/" + params.id)
       .then((res) => {
         setUserForm({
           name: res.data.data.name,
