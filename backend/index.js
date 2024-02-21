@@ -25,7 +25,7 @@ app.use(
     extended: true,
   }),
 );
-app.use(cors({origin: true, credentials: true}));
+app.use(cors());
 
 app.use("/students", studentRoute);
 
